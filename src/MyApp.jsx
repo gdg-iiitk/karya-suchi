@@ -33,70 +33,27 @@ const TodoApp = () => {
 
   // This function adds a new todo to the todos state
 
-  const addTodo = (e) => {
-    e.preventDefault();
-
-    if (inputValue.trim() !== "") {
-      const updatedTodos = [
-        ...todos,
-        {
-          id: Date.now(),
-          text: inputValue,
-          completed: false,
-        },
-      ];
-      setTodos(updatedTodos);
-      localStorage.setItem("todos", JSON.stringify(updatedTodos));
-      setInputValue("");
-    }
-  };
+  const addTodo = (e) => {};
 
   //This function deletes a todo from the todos state
 
-  const deleteTodo = (id) => {
-    const updatedTodos = todos.filter((todo) => todo.id !== id);
-    setTodos(updatedTodos);
-    localStorage.setItem("todos", JSON.stringify(updatedTodos));
-  };
+  const deleteTodo = (id) => {};
 
   // This function toggles the completed status of a todo, its that checkbox thingy
 
-  const toggleTodo = (id) => {
-    const updatedTodos = todos.map((todo) =>
-      todo.id == id ? { ...todo, completed: !todo.completed } : todo
-    );
-    setTodos(updatedTodos);
-    localStorage.setItem("todos", JSON.stringify(updatedTodos));
-  };
+  const toggleTodo = (id) => {};
 
   // Write the toggleCompleted function here for the hide completed button
   // function toggleCompleted(){}
 
   // This function starts the editing process of a todo
-  const startEditing = (id, text) => {
-    setEditingId(id);
-    setEditValue(text);
-  };
+  const startEditing = (id, text) => {};
 
   // This function saves the edited todo
-  const saveEdit = (id) => {
-    if (editValue.trim() === "") {
-      setEditingId(null);
-      return;
-    }
-    const updatedTodos = todos.map((todo) =>
-      todo.id === id ? { ...todo, text: editValue } : todo
-    );
-    setTodos(updatedTodos);
-    localStorage.setItem("todos", JSON.stringify(updatedTodos));
-    setEditingId(null);
-  };
+  const saveEdit = (id) => {};
 
   // This fuction cancels the editing process
-  const cancelEdit = () => {
-    setEditingId(null);
-    setEditValue("");
-  };
+  const cancelEdit = () => {};
 
   return (
     <div className="h-[100vh] rounded-lg shadow-xl  flex flex-col md:flex-row items-center justify-evenly  ">
