@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #000812;
+}
+
+.mainButton {
+  background: #00e5ff;
+  border-radius: 10px;
+  padding: 8px 15px;
+  color: #000812;
+  font-weight: 600;
+  font-stretch: expanded;
+}
+.anotherButton {
+  background: #2e3239;
+  border-radius: 10px;
+  padding: 8px 15px;
+  color: #fff;
+  font-weight: 600;
+  font-stretch: expanded;
+}
+
+::-webkit-scrollbar {
+  background-color: transparent;
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(125, 125, 125, 0.459);
+
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: radial-gradient(
+    296.72% 125.46% at 1.54% 6.25%,
+    #12263a 0%,
+    #1e2c3f 53.23%,
+    #060c13 100%
+  );
+}
