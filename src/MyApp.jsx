@@ -70,7 +70,7 @@ const TodoApp = () => {
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             placeholder="Add a new todo"
-            className="w-full p-2 border border-neutral-500 rounded-md focus:outline-none bg-[#121212] text-white "
+            className="mainInput w-full p-2 border border-neutral-500 rounded-md focus:outline-none bg-[#121212] text-white "
           />
           <div className=" flex gap-4 m-3">
             <button
@@ -119,13 +119,13 @@ const TodoApp = () => {
                       />
                       <button
                         onClick={() => saveEdit(todo.id)}
-                        className="text-xl mx-4 hover:text-[#00e5ff] focus:text-[#00e5ff]"
+                        className="tickButton text-xl mx-4 hover:text-[#00e5ff] focus:text-[#00e5ff]"
                       >
                         <FaCheck />
                       </button>
                       <button
                         onClick={() => cancelEdit()}
-                        className="text-lg mx-3 hover:text-[#00e5ff] focus:text-[#00e5ff]"
+                        className="cancelButton text-lg mx-3 hover:text-[#00e5ff] focus:text-[#00e5ff]"
                       >
                         <ImCross />
                       </button>
@@ -137,7 +137,7 @@ const TodoApp = () => {
                           type="checkbox"
                           checked={todo.completed}
                           onChange={() => toggleTodo(todo.id)}
-                          className="mr-2  appearance-none w-5 h-5 border border-neutral-600 rounded-sm bg-[#121212]
+                          className="checker mr-2  appearance-none w-5 h-5 border border-neutral-600 rounded-sm bg-[#121212]
                           checked:bg-[#00e5ff] checked:border-[#00e5ff] hover:ring-1 hover:ring-[#00e5ff] hover:cursor-pointer focus:outline-none
     mt-1"
                         />
@@ -152,13 +152,13 @@ const TodoApp = () => {
                       </span>
                       <button
                         onClick={() => deleteTodo(todo.id)}
-                        className="text-2xl mx-3 hover:text-[#00e5ff] f "
+                        className="deleteButton text-2xl mx-3 hover:text-[#00e5ff] f "
                       >
                         <MdDelete />
                       </button>
                       <button
                         onClick={() => startEditing(todo.id, todo.text)}
-                        className="text-2xl mx-3 hover:text-[#00e5ff]  "
+                        className="editButton text-2xl mx-3 hover:text-[#00e5ff]  "
                       >
                         <MdEdit />
                       </button>
